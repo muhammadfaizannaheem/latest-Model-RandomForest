@@ -14,7 +14,7 @@ model=joblib.load('model_jbl.model')
 def predict_unnamed(v_1,v_2,v_3,v_4,v_5,v_6):
     """This function gets the unnamed args from the api and predicts the label"""
     prediction = model.predict([[v_1,v_2,v_3,v_4,v_5,v_6]])
-    return int(prediction)
+    return jsonify(int(prediction))
 
 
 if __name__ == '__main__':
